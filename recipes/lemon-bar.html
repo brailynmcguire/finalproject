@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="icon" type="images/x-icon" href="../images/logo.png">
+
+     <!-- jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+	<!-- Slicknav JS file -->
+	<script src="../js/jquery.slicknav.min.js"></script>
+
+    <script type="text/javascript">
+		$(document).ready(function () {
+			$('#nav_bar').slicknav({ prependTo: "#mobilemenu" });
+		});
+	</script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/00485dc981.js" crossorigin="anonymous"></script>
+
+    <!-- style links -->
+    <link rel="stylesheet" href="../styles/slicknav.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/recipe-page.css">
+
+    <title>Lemon Bars Recipe</title>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <a href="index.html"><img src="../images/logo.png" alt="Logo Image"></a>
+            <h1>Brailyn's Digital Cookbook</h1>
+            <h2>A Collection of Baked Goods I've Made</h2>
+        </div>
+        <!-- nav bar -->
+        <nav id="mobilemenu"></nav>
+        <nav id="nav_bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a>
+                    <ul>
+                        <li><a href="brown-sugar-muffins.html">Brown Sugar Muffins</a></li>
+                        <li><a href="lemon-bar.html">Lemon Bars</a></li>
+                        <li><a href="rasp-lemon-pie.html">Raspberry Lemon Crumble Pie</a></li>
+                    </ul>
+                </li>
+                <li><a href="../slideshow.html">Slideshow</a></li>
+                <li><a href="../countdown.html">Countdown</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- recipe links -->
+    <nav id="nav_list">
+        <h2>Link to the Recipe Used</h2>
+        <ul>
+            <li><a href="https://sallysbakingaddiction.com/lemon-bars-recipe/" target="_blank">Lemon Bars with
+                    Shortbread Crust</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!-- recipe -->
+        <div class="heading">
+            <h2>Lemon Bars</h2>
+            <img src="../images/iCloud Photos/lemonbar-3.JPEG" alt="">
+        </div>
+        <p id="intro">
+            I&apos;ve always enjoyed a lemon bar and we had extra lemons in my fridge, so I decided to make these.
+            Despite an
+            unfortunate egg shortage and their time consuming nature, I will definitely be making these again in the
+            future.
+        </p>
+        <div class="recipe">
+            <h3>Ingredients for the Shortbread Crust:</h3>
+            <ul>
+                <li>1 Cup of Unsalted Butter, Melted</li>
+                <li>1/2 Cup of Granulated Sugar</li>
+                <li>2 Teaspoons of Vanilla Extract</li>
+                <li>1/2 Teaspoon of Salt</li>
+                <li>2 Cups &plus; 2 Tablespoons of All&dash;Purpose Flour</li>
+            </ul>
+            <h3>Ingredients for the Lemon Filling:</h3>
+            <ul>
+                <li>2 Cups of Granulated Sugar</li>
+                <li>6 Tablespoons of All&dash;Purpose Flour</li>
+                <li>6 Large Eggs</li>
+                <li>1 Cup of Fresh Lemon Juice (About 4 Lemons)</li>
+                <li>2 Teaspoons of Fresh Lemon Zest, (Optional)</li>
+                <li>Confectioners&apos; Sugar for Dusting (Optional)</li>
+            </ul>
+            <h3>Steps:</h3>
+            <h4>For the Shortbread Crust:</h4>
+            <ol>
+                <li>Preheat the oven to 325&deg;F. Line a 9 x 13 inch glass baking pan with parchemnt paper, leaving an
+                    overhang on the sides.</li>
+                <li>Mix melted butter, sugar, vanilla extract, and salt in a medium bowl. Add flour and combine
+                    completely.
+                    Press firmly into the pan, making sure the crust is as even as possible. Bake for 20-22 minutes or
+                    until
+                    the edges are lightly browned.</li>
+                <li>After removing the crust from the oven, poke holes in it using a fork (not all the way through).
+                </li>
+            </ol>
+            <h4>Next, Make the Lemon Filling:</h4>
+            <ol start="4">
+                <li>Combine sugar and flour in a large bowl. Add in eggs, then lemon juice, then finally zest, if
+                    desired.
+                    (<b>NOTE:</b> Prepare the lemon zest, then the lemon juice beforehand starting on the crust.)</li>
+                <li>Pour filling over warm crust and bake again for 22-26 minutes, or until the center is relatively set
+                    and
+                    no longer jiggles.</li>
+                <li>Let the bars cool at room temperature for about 2 hours and chill in the fridge for about 1-2.</li>
+                <li>Serve chilled with a dusting of confectioners&apos; sugar. Enjoy! &hearts;</li>
+            </ol>
+        </div>
+    </main>
+    <div><button id="cornerBtn" class="return-to-top" title="Return to Top" onclick="topFunction()"><i
+                class="fa-solid fa-circle-arrow-up"></i></button></div>
+    <footer>
+        <p>&copy; <span id="copyrightyear"></span> Brailyn McGuire</p>
+    </footer>
+</body>
+
+</html>
+
+<!-- js link -->
+<script src="../js/scripts.js"></script>

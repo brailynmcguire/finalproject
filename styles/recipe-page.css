@@ -1,0 +1,51 @@
+/* *************************************************
+*******************main-content*********************
+***************************************************/
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 150%;
+}
+
+.heading img {
+    max-width: 300px;
+    border: 5px solid rgb(255, 172, 157);
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+#intro {
+    padding: 10px 30px;
+    font-size: 125%;
+}
+
+.recipe {
+    margin: 20px auto 0;
+    padding: 0 20px;
+    font-size: 115%;
+}
+
+main h3 {
+    padding-top: 5%;
+}
+
+main ul {
+    padding-top: 10px;
+}
+
+main ol {
+    padding: 20px 10px;
+}
+
+main ul,
+main ol {
+    padding-left: 5%;
+}
+
+main h4 {
+    font-size: 100%;
+}

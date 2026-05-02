@@ -1,0 +1,136 @@
+/* *************************************************
+*******************main-content*********************
+***************************************************/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.imagecarousel {
+    position: relative;
+}
+
+.image {
+    display: none;
+}
+
+.image:first-of-type {
+    display: block;
+}
+
+.image img {
+    border-radius: 10px;
+    width: 500px;
+    border: 5px solid rgb(86, 66, 46);
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 3px solid rgba(86, 66, 46, 0.475);
+    border-radius: 10px;
+    font-size: 150%;
+    transform: translateY(-50%);
+    padding: .25em;
+    transition: all ease-in-out 75ms;
+}
+
+.prev:hover,
+.next:hover {
+    color: rgb(86, 66, 46);
+    border: 5px solid rgb(86, 66, 46);
+    background-color: white;
+    cursor: pointer;
+}
+
+.prev {
+    left: -75px;
+}
+
+.next {
+    right: -75px;
+}
+
+.dots {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 9px;
+}
+
+.dot:hover {
+    background-color: white;
+    border: 3px solid rgb(86, 66, 46);
+}
+
+.dot {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50vh;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all ease-in-out 75ms;
+    border: 3px solid rgba(86, 66, 46, 0.49);
+}
+
+.active {
+    background-color: white;
+    border: 3px solid rgb(86, 66, 46);
+}
+
+.fadeout {
+    animation: fade 2000ms;
+}
+
+@keyframes fade {
+    from {opacity: .2;} 
+    to {opacity: 1;}
+}
+
+/* ***************************************************
+**************media-queries***************************
+*************************************************** */
+
+@media only screen and (max-width: 767px) {
+
+    main b {
+        font-size: 95%;
+        text-align: center;
+        width: 95%;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .dots {
+        width: 95%;
+    }
+
+    .prev {
+        left: 15px;
+    }
+
+    .next {
+        right: 15px;
+    }
+
+    .prev,
+    .next {
+        font-size: 150%;
+    }
+
+    .dots {
+        padding: 1em;
+    }
+
+}
+
+

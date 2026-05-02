@@ -1,0 +1,77 @@
+/**************************************************
+*******************main-content*********************
+***************************************************/ 
+
+#title {
+    text-align: center;
+    margin-left: 30px;
+    margin-bottom: .5em;
+}
+
+.recipe-tabs {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 auto;
+}
+
+.view-more a {
+    display: block;
+    background-color: rgb(255, 172, 157);
+    max-width: 250px;
+    max-height: 250px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 300%;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: .75em .25em;
+    border: 3px solid white;
+}
+
+.recipe-tabs img {
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(255, 172, 157);
+    border: 3px solid white;
+}
+
+.recipe-tabs img:hover {
+    border: 3px solid rgb(86, 66, 46);
+    background-color: white;
+    transition: all 300ms;
+    padding: 15px;
+}
+
+.view-more a:hover {
+    border: 3px solid rgb(86, 66, 46);
+    background-color: white;
+    color: rgb(86, 66, 46);
+    text-decoration: underline;
+    transition: all 300ms;
+    padding: .8em .35em;
+}
+
+#lemon-bars {
+    max-height: 275px;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* ***************************************************
+**************media-queries***************************
+*************************************************** */
+
+@media only screen and (max-width: 767px) {
+
+    .recipe-tabs {
+        grid-template-columns: auto;
+    }
+
+}

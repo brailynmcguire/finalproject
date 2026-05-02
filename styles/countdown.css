@@ -1,0 +1,57 @@
+/* *************************************************
+*******************main-content*********************
+***************************************************/
+
+.countdown {
+    margin: 5% auto 10%;
+    padding: 5%;
+    background-image: url(../images/rasp-cupcake.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: white;
+    border: 5px solid rgb(255, 172, 157);
+    max-width: 80%;
+    font-size: 100%;
+}
+
+#displaytimer {
+    padding-top: 1em;
+    border-top: 3px solid white;
+    font-size: 250%;
+}
+
+#displaytimer,
+main h3,
+main h4 {
+    background-color: rgba(191, 177, 146, 0.749);
+    text-align: center;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+main h3 {
+    font-size: 200%;
+}
+
+main h4 {
+    padding-bottom: 5%;
+    border-bottom: 3px solid white;
+    font-size: 150%;
+}
+
+/* ***************************************************
+**************media-queries***************************
+*************************************************** */
+
+@media only screen and (max-width: 767px) {
+
+    main b {
+        font-size: 95%;
+        text-align: center;
+        width: 95%;
+    }
+
+}

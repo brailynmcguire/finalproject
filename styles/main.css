@@ -1,0 +1,363 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url(../images/floral-background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    background-color: rgba(255, 246, 226, 0.86);
+    border-right: 5px solid rgb(255, 172, 157);
+    border-left: 5px solid rgb(255, 172, 157);
+    color: rgb(86, 66, 46);
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: 
+        'header header'
+        'list content'
+        'footer footer';
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: "Patrick Hand", cursive;
+}
+
+header {
+    grid-area: header;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h2 {
+    padding-bottom: 30px;
+}
+
+.title img {
+    max-width: 150px;
+    padding-top: 20px;
+}
+
+/********************************************************* 
+*********************** Nav Bar **************************
+**********************************************************/
+
+#nav_bar {
+    /* border: 5px solid rgb(255, 172, 157); */
+    background-color: rgb(255, 246, 226);
+    border-right: 2px solid rgb(255, 172, 157);
+    border-left: 2px solid rgb(255, 172, 157);
+}
+
+#nav_bar ul {
+    list-style-type: none;
+    position: relative;
+    display: flex;
+}
+
+#nav_bar li {
+    width: 297px;
+}
+
+#nav_bar a {
+    display: block;
+    color: white;
+    background-color: rgb(255, 172, 157);
+    /* background-color: rgb(181, 198, 203); */
+    text-align: center;
+    padding: .7em 0;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all ease-in-out 200ms;
+}
+
+#nav_bar ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+#nav_bar ul li:hover>ul {
+    display: block;
+}
+
+#nav_bar ul ul li a {
+    text-align: left;
+    padding-left: .25em;
+}
+
+#nav_bar a:hover {
+    text-decoration: underline;
+    background-color: white;
+    color: rgb(86, 66, 46);
+}
+
+#mobilemenu {
+    display: none;
+}
+
+/* **************************************************
+****************** Nav List *************************
+************************************************** */
+
+#nav_list {
+    margin-bottom: 20px;
+    grid-area: list;
+}
+
+#nav_list h2 {
+    margin: 25px 0;
+    text-align: center;
+    position: sticky;
+    top: 3%;
+}
+
+#nav_list ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    position: sticky;
+    top: 10%;
+}
+
+#nav_list li {
+    width: 90%;
+    border-radius: 10px;
+    font-size: 115%;
+}
+
+#nav_list a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(255, 172, 157);
+    padding: .5em;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid white;
+}
+
+#nav_list a:hover {
+    background-color: white;
+    color: rgb(86, 66, 46);
+    border: 3px solid rgb(86, 66, 46);
+    transition: all 300ms;
+    text-decoration: underline;
+    padding: .6em;
+}
+
+/* *************************************************
+*******************main-content*********************
+***************************************************/
+
+main {
+    grid-area: content;
+    padding-left: 5%;
+}
+
+main h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    font-size: 275%;
+    margin: 1em auto 0; 
+}
+
+main b {
+    border-bottom: 3px solid rgb(86, 66, 46);
+}
+
+#heart-cookies {
+    width: 350px;
+    display: flex;
+    margin: 5% auto;
+    border: 5px solid rgb(86, 66, 46);
+    border-radius: 10px;
+}
+
+section p {
+    padding: 10px 30px;
+    font-size: 125%;
+}
+
+form h3 {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 150%;
+}
+
+.formgroup {
+    display: flex;
+    align-items: baseline;
+    padding-top: 10px;
+}
+
+.formgroup label {
+    width: 30%;
+    text-align: right;
+    padding-right: 5px;
+    font-size: 125%;
+}
+
+input[type=submit],
+input[type=reset] {
+    background-color: rgb(255, 172, 157);
+    padding: 8px 15px;
+    border: 3px solid white;
+    border-radius: 10px;
+    font-family: "Patrick Hand", cursive;
+    font-size: 125%;
+    color: white;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover,
+select:hover {
+    background-color:white;
+    font-weight: bold;
+    text-decoration: underline;
+    border: 3px solid rgb(86, 66, 46);
+    color: rgb(86, 66, 46);
+    transition: all 300ms;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    gap: 15px;
+}
+
+.return-to-top {
+    display: none;
+    position: fixed;
+    left: 250px;
+    bottom: 100px;
+    z-index: 9999;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: rgb(86, 66, 46);
+    opacity: 50%;
+    transition: all ease-in-out 300ms;
+}
+
+.return-to-top i {
+    font-size: 500%;
+}
+
+.return-to-top:hover {
+    opacity: 100%;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: rgb(255, 172, 157);
+    color: white;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/* ***************************************************
+**************media-queries***************************
+*************************************************** */
+
+@media only screen and (max-width: 767px) {
+    
+    body {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            'header'
+            'content'
+            'list'
+            'footer';
+        border: none;
+    }
+
+    #nav_bar {
+        display: none;
+    }
+
+    #mobilemenu {
+        display: block;
+    }
+
+    .slicknav_menu {
+        background-color: rgb(255, 172, 157);
+    }
+
+    #mobilemenu a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: .25em;
+    }
+
+    #mobilemenu a:hover {
+        color: rgb(86, 66, 46);
+    }
+
+    #mobilemenu ul {
+        list-style-type: none;
+    }
+
+    main {
+        padding-left: 0;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .formgroup {
+        flex-direction: column;
+    }
+
+    .formgroup label {
+        width: 95%;
+        text-align: center;
+    }
+
+    textarea {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .return-to-top {
+        left: 10px;
+        bottom: 10px;
+    }
+}

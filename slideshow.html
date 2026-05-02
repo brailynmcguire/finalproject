@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- favicon -->
+    
     <link rel="icon" type="images/x-icon" href="images/logo.png">
 
-    <!-- jQuery CDN -->
+     <!-- jQuery CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
 
 	<!-- Slicknav JS file -->
@@ -31,15 +29,15 @@
     <!-- style links -->
     <link rel="stylesheet" href="styles/slicknav.css">
     <link rel="stylesheet" href="styles/main.css">
-    
+    <link rel="stylesheet" href="styles/slideshow.css">
+ 
+    <title>Slideshow Page</title>
 
-    <title>Brailyn's Digital Cookbook</title>
 </head>
-
 <body>
     <header>
         <div class="title">
-            <a href="index.html"><img src="images/logo.png" alt="Logo Image"></a>
+            <a href="index.html"><img src="../images/logo.png" alt="Logo Image"></a>
             <h1>Brailyn's Digital Cookbook</h1>
             <h2>A Collection of Baked Goods I've Made</h2>
         </div>
@@ -47,7 +45,7 @@
         <nav id="mobilemenu"></nav>
         <nav id="nav_bar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="recipes/recipes.html">Recipes</a>
                     <ul>
                         <li><a href="recipes/brown-sugar-muffins.html">Brown Sugar Muffins</a></li>
@@ -71,30 +69,43 @@
     </nav>
     <main>
         <!-- main content -->
-        <h1><b>Welcome!</b></h1>
-        <img src="images/heart-cookies.png" alt="Heart Cookies" id="heart-cookies">
-        <section>
-            <p>
-                The purpose of this website is to compile recipes and my thoughts on them. I find that a lot of
-                baking/cooking websites are slow and annyoing to use. And if I try to print out the recipe, it will
-                often get lost or ruined. Therefore, I&apos;ve created this website to organize my recipes and to
-                simplify them to help me when I&apos;m baking. I hope I will continue to use this website in the future
-                and that it will improve my efficiency while baking and save paper. &hearts;
-            </p>
-        </section>
-        <aside>
-            <form action="#" name="suggestions" id="aruba_ed" method="get" autocomplete="on" target="_blank">
-                <h3>Have a Suggestion for Something I Should Bake?</h3>
-                <div class="formgroup">
-                    <label for="suggestion">Enter your Suggestion Here:</label>
-                    <textarea name="suggestion" id="suggestion" rows="4" cols="50"></textarea>
+        <h1><b>Gallery of Baked Goods</b></h1>
+        <div class="container">
+            <div class="imagecarousel" onload="setInterval()">
+                <div class="image fadeout"><img src="images/iCloud Photos/7muffins-3.png" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/lemonbar-3.JPEG" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/lemonbars-2.JPEG" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/muffin3.JPEG" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/muffin7-1.JPEG" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/muffin7-2.JPEG" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/pie-2ndattempt.JPEG" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/pie.JPEG" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/pie2ndattempt-2.png" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/single-lemonbar.JPEG" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/unslice-lemonbars.JPEG" alt=""></div>
+                <div class="image fadeout"><img src="images/iCloud Photos/lemonbars-1.png" alt=""></div>
+                <div class="prev">
+                    <i class="fa-solid fa-arrow-left" onclick="showImages(-1)"></i>
                 </div>
-                <div class="buttons">
-                    <input type="submit" value="Submit Form">
-                    <input type="reset" value="Clear Form">
+                <div class="next">
+                    <i class="fa-solid fa-arrow-right" onclick="showImages(1)"></i>
                 </div>
-            </form>
-        </aside>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
     </main>
     <div><button id="cornerBtn" class="return-to-top" title="Return to Top" onclick="topFunction()"><i
                 class="fa-solid fa-circle-arrow-up"></i></button></div>
@@ -102,7 +113,6 @@
         <p>&copy; <span id="copyrightyear"></span> Brailyn McGuire</p>
     </footer>
 </body>
-
 </html>
 
 <!-- js link -->
